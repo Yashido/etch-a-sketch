@@ -1,15 +1,5 @@
-main {
+body {
     max-width: 38rem;
     padding: 2rem;
     margin: auto;
-}
-.cnt-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.cnt-head {
-    justify-content: center;
-    align-items: center;
 }
