@@ -3,3 +3,6 @@ body {
     padding: 2rem;
     margin: auto;
 }
+.title {
+    font-family: 'Silkscreen', cursive;
+}
