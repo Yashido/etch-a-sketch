@@ -6,3 +6,7 @@ body {
 .title {
     font-family: 'Silkscreen', cursive;
 }
+.main {
+    display: flex;
+    flex-direction: row;
+}
