@@ -10,3 +10,6 @@ body {
     display: flex;
     flex-direction: row;
 }
+.gridElement {
+    user-select: none;
+}
