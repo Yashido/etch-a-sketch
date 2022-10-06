@@ -4,18 +4,18 @@ const rainbowBtn = document.getElementById('rainbowBtn');
 const resetBtn = document.getElementById('eraserBtn');
 const sideValue = document.getElementById('sideValue');
 const sizeSlider = document.getElementById('sizeSlider');
-const cnt_grid = document.getElementById('cnt-grid');
+const grid = document.getElementById('cnt-grid');
 
 function setGrid(size) {
-    cnt_grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    cnt_grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     for(let i = 0; i < size * size; i++) {
-        const cnt_gridEl = document.createElement('div');
-        cnt_gridEl.classList.add('gridElement');
-        cnt_gridEl.addEventListener('mouseover', changeColor);
-        cnt_gridEl.addEventListener('mousedown', changeColor);
-        cnt_grid.appendChild(cnt_gridEl);
+        const gridEl = document.createElement('div');
+        gridEl.classList.add('gridElement');
+        gridEl.addEventListener('mouseover', changeColor);
+        gridEl.addEventListener('mousedown', changeColor);
+        grid.appendChild(gridEl);
     }
 
 }
