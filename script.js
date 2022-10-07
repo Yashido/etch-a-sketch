@@ -9,6 +9,7 @@ const sideValue = document.getElementById('sideValue');
 const sizeSlider = document.getElementById('sizeSlider');
 const grid = document.getElementById('cnt-grid');
 
+/*
 function setGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -21,6 +22,15 @@ function setGrid(size) {
         grid.appendChild(gridEl);
     }
 
+}
+*/
+
+function setGrid(size) {
+  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    for(let i = 0; i < size * size; i++) {
+      const gridDiv = document.createElement('div');
+    }
 }
 function changeColor(e) {
     if (e.type === 'mouseover' && !mouseDown) return
