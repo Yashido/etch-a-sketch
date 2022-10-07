@@ -1,3 +1,6 @@
+const DEFAULT_VALUE = '#69a2ff';
+const DEFAULT_SIZE = 16;
+
 const colorPicker = document.getElementById('colorPicker');
 const colorBtn = document.getElementById('colorBtn');
 const rainbowBtn = document.getElementById('rainbowBtn');
