@@ -24,6 +24,13 @@ button {
     font-size: 1.5rem;
     padding: 1rem;
 }
+#grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    box-shadow: rgb(red, green, blue);
+}
 .gridElement {
     user-select: none;
 }

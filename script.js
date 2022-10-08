@@ -5,7 +5,7 @@ const colorPicker = document.getElementById('colorPicker');
 const colorBtn = document.getElementById('colorBtn');
 const rainbowBtn = document.getElementById('rainbowBtn');
 const resetBtn = document.getElementById('eraserBtn');
-const sideValue = document.getElementById('sideValue');
+const sizeValue = document.getElementById('sideValue');
 const sizeSlider = document.getElementById('sizeSlider');
 const grid = document.getElementById('cnt-grid');
 
@@ -30,6 +30,8 @@ function setGrid(size) {
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     for(let i = 0; i < size * size; i++) {
       const gridDiv = document.createElement('div');
+      
+      grid.appendChild('gridDiv');
     }
 }
 function changeColor(e) {
@@ -48,6 +50,9 @@ function changeColor(e) {
 
 const gridSize = 16;
 
+/*
 window.onload = () => {
     setGrid(gridSize);
 }
+*/
+setGrid(gridSize);
