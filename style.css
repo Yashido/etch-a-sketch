@@ -33,9 +33,11 @@ button {
     display: grid;
     width: 500px;
     height: 500px;
-    background-color: blue;
-    box-shadow: rgb(red, green, blue);
+    background-color: white;
+    border-style: solid;
 }
 .gridElement {
+    border: 1px;
+    border-style: solid;
     user-select: none;
 }
