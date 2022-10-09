@@ -5,10 +5,13 @@ const colorPicker = document.getElementById('colorPicker');
 const colorBtn = document.getElementById('colorBtn');
 const rainbowBtn = document.getElementById('rainbowBtn');
 const resetBtn = document.getElementById('eraserBtn');
-const sizeValue = document.getElementById('sideValue');
+const sizeValue = document.getElementById('sizeValue');
 const sizeSlider = document.getElementById('sizeSlider');
 const grid = document.getElementById('grid');
 
+function setSizeValue(value) {
+  sizeValue.innerHTML = `${value} x ${value}`
+}
 /*
 function setGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -32,7 +35,6 @@ function setGrid(size) {
       const gridDiv = document.createElement('div');
       gridDiv.classList.add('gridElement');
       grid.appendChild(gridDiv);
-      //grid.appendChild('gridDiv');
     }
 }
 /*
