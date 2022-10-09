@@ -8,6 +8,7 @@ const resetBtn = document.getElementById('eraserBtn');
 const sizeValue = document.getElementById('sizeValue');
 const sizeSlider = document.getElementById('sizeSlider');
 const grid = document.getElementById('grid');
+const value = document.getElementById('sizeSlider').oninput = () => setSizeValue(value);
 
 function setSizeValue(value) {
   sizeValue.innerHTML = `${value} x ${value}`
