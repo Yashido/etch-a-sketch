@@ -1,5 +1,10 @@
 const DEFAULT_VALUE = '#69a2ff';
 const DEFAULT_SIZE = 16;
+const DEFAULT_MODE = colorBtn;
+
+let crtValue = DEFAULT_VALUE;
+let crtSize = DEFAULT_SIZE;
+let crtMode = DEFAULT_MODE;
 
 const colorPicker = document.getElementById('colorPicker');
 const colorBtn = document.getElementById('colorBtn');
