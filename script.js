@@ -13,12 +13,15 @@ const resetBtn = document.getElementById('eraserBtn');
 const sizeValue = document.getElementById('sizeValue');
 const sizeSlider = document.getElementById('sizeSlider');
 const grid = document.getElementById('grid');
+const mouseValue;
 const value = document.getElementById('sizeSlider').oninput = () => setSizeValue(value);
 
 function setSizeValue(value) {
   sizeValue.innerHTML = `${value} x ${value}`
 }
-
+function setMode(colorBtn,rainbowBtn) {
+  const mouseValue.document.oninput();
+};
 function clearGrid() {
   grid.innerHTML = '';
 }
@@ -31,6 +34,7 @@ function setGrid(size) {
       grid.appendChild(gridDiv);
     }
 }
+
 
 const gridSize = 16;
 
