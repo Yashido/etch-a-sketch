@@ -38,21 +38,17 @@ function setGrid(size) {
       grid.appendChild(gridDiv);
     }
 }
-let curColor = '';
+let curColor = '#000000';
 function updateColor() {
   const colorPicker = document.getElementById('colorPicker').value;
   console.log(colorPicker);
-  changeColor(e);
-/*
+  curColor = colorPicker;
+}
 function changeColor(e) {
   Object.assign(e.target.style, {
-    backgroundColor: colorPicker})
-    return;
+    backgroundColor: curColor})
   }
-*/
-function changeColor() {
-  
-}
+
 
 const gridSize = 16;
 
