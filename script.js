@@ -17,6 +17,7 @@ function setSizeValue() {
 
 function clearGrid() {
   grid.innerHTML = '';
+  setGrid(val);
   console.log(sizeSlider);
   return;
 }
@@ -29,6 +30,7 @@ function updateValue() {
   console.log(val);
 }
 function setGrid(size) {
+  grid.innerHTML = '';
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     for(let i = 0; i < size * size; i++) {
@@ -45,10 +47,21 @@ function updateColor() {
   curColor = colorPicker;
 }
 function changeColor(e) {
+  rainbow();
   Object.assign(e.target.style, {
     backgroundColor: curColor})
   }
 
+function randomNum() {
+  return Math.floor(Math.random() * (255 - 0) + 0);
+}
+function rainbow() {
+  let r = randomNum();
+  let g = randomNum();
+  let b = randomNum();
+  curColor = 'rgb('+ r + ','+ g +','+ b +')';
+  console.log(curColor);
+}
 
 const gridSize = 16;
 
@@ -57,4 +70,5 @@ window.onload = () => {
     setGrid(gridSize);
 }
 */
-setGrid(32);
+setGrid(16);
+setSizeValue();

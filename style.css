@@ -2,6 +2,7 @@ body {
     max-width: 50rem;
     padding: 2rem;
     margin: auto;
+    background-color: #f8f5e6;
 }
 .header {
     display: flex;
@@ -46,5 +47,5 @@ button.selected {
     user-select: none;
 }
 .color {
-    background-color: #000000;
+    background-color: rgb(red, green, blue);
 }
