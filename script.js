@@ -1,32 +1,32 @@
-const DEFAULT_VALUE = '#69a2ff';
-const DEFAULT_SIZE = 16;
-//const DEFAULT_MODE = colorBtn;
-
-let crtValue = DEFAULT_VALUE;
-let crtSize = DEFAULT_SIZE;
-// let crtMode = DEFAULT_MODE;
-
-const colorPicker = document.getElementById('colorPicker');
+const colorPicker = document.getElementById('colorPicker').value;
 const colorBtn = document.getElementById('colorBtn');
 const rainbowBtn = document.getElementById('rainbowBtn');
 const resetBtn = document.getElementById('eraserBtn');
 const sizeValue = document.getElementById('sizeValue');
-const sizeSlider = document.getElementById('sizeSlider');
+const sizeSlider = document.getElementById('sizeSlider').value;
+console.log(sizeSlider);
 const grid = document.getElementById('grid');
-// const mouseValue;
-const value = document.getElementById('sizeSlider').oninput = () => setSizeValue(value);
+const gridElement = document.getElementsByClassName('gridElement');
 
-function setSizeValue(value) {
-  sizeValue.innerHTML = `${value} x ${value}`
+// const mouseValue;
+const value = document.getElementById('sizeSlider').oninput = () => setSizeValue();
+
+function setSizeValue() {
+  sizeValue.innerHTML = `${val} x ${val}`;
 }
-/*
-function setMode(colorBtn,rainbowBtn) {
-  const mouseValue.document.oninput();
-}
-*/
+
 function clearGrid() {
   grid.innerHTML = '';
-
+  console.log(sizeSlider);
+  return;
+}
+let val = 16;
+function updateValue() {
+  val = document.getElementById('sizeSlider').value;
+  setSizeValue()
+  clearGrid()
+  setGrid(val)
+  console.log(val);
 }
 function setGrid(size) {
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -34,10 +34,25 @@ function setGrid(size) {
     for(let i = 0; i < size * size; i++) {
       const gridDiv = document.createElement('div');
       gridDiv.classList.add('gridElement');
+      gridDiv.addEventListener('mouseover', changeColor);
       grid.appendChild(gridDiv);
     }
 }
-
+let curColor = '';
+function updateColor() {
+  const colorPicker = document.getElementById('colorPicker').value;
+  console.log(colorPicker);
+  changeColor(e);
+/*
+function changeColor(e) {
+  Object.assign(e.target.style, {
+    backgroundColor: colorPicker})
+    return;
+  }
+*/
+function changeColor() {
+  
+}
 
 const gridSize = 16;
 
