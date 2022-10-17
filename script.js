@@ -46,6 +46,7 @@ function updateColor() {
   console.log(colorPicker);
   curColor = colorPicker;
 }
+
 var color = colorBtn;
 let rainb = rainbowBtn;
 let currentMode = color;
