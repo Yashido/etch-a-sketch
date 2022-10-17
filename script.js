@@ -19,7 +19,6 @@ function clearGrid() {
   grid.innerHTML = '';
   setGrid(val);
   console.log(sizeSlider);
-  return;
 }
 let val = 16;
 function updateValue() {
@@ -40,27 +39,38 @@ function setGrid(size) {
       grid.appendChild(gridDiv);
     }
 }
-let curColor = '#000000';
+let currentColor = '#000000';
 function updateColor() {
   const colorPicker = document.getElementById('colorPicker').value;
   console.log(colorPicker);
-  curColor = colorPicker;
+  currentColor = colorPicker;
 }
 
-var color = colorBtn;
-let rainb = rainbowBtn;
-let currentMode = color;
-function colorMode() {
-  currentMode = color;
+const defaultMode = 'solid';
+let currentMode = defaultMode;
+
+function colorMode(mode) {
+  currentMode = mode;
   console.log(currentMode);
 }
+/*
 function rainbowMode() {
   currentMode = rainb;
   console.log(currentMode);
 }
+*/
 function changeColor(e) {
-  rainbow();
-  Object.assign(e.target.style, {backgroundColor: curColor});
+  if(currentMode === 'solid') {
+    currentColor = colorPicker;
+    Object.assign(e.target.style, {backgroundColor: currentColor});
+  }
+  else if(currentMode === 'rainbow') {
+    rainbowMode();
+    Object.assign(e.target.style, {backgroundColor: currentColor});
+  } else if(currentMode === 'eraser'){
+    currentColor = '#FFFFFF';
+    Object.assign(e.target.style, {backgroundColor: currentColor});
+  }
 }
 /*
 function changeColor(e) {
@@ -72,12 +82,12 @@ function changeColor(e) {
 function randomNum() {
   return Math.floor(Math.random() * (255 - 0) + 0);
 }
-function rainbow() {
+function rainbowMode() {
   let r = randomNum();
   let g = randomNum();
   let b = randomNum();
-  curColor = 'rgb('+ r + ','+ g +','+ b +')';
-  console.log(curColor);
+  currentColor = 'rgb('+ r + ','+ g +','+ b +')';
+  console.log(currentColor);
 }
 
 const gridSize = 16;
