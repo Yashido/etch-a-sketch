@@ -18,8 +18,8 @@
     <main class="main">
         <div class="settings">
             <input id="colorPicker" type="color" value="#000000" oninput="updateColor()"/>
-            <button id="colorBtn">Color Mode</button>
-            <button id="rainbowBtn">Rainbow Mode</button>
+            <button id="colorBtn" onclick="colorMode()">Color Mode</button>
+            <button id="rainbowBtn" onclick="rainbowMode()">Rainbow Mode</button>
             <button id="eraserBtn">Eraser</button>
             <button id="resetBtn" onclick="clearGrid()">Reset</button>
             <div id="sizeValue" class="size-value"></div>

@@ -46,12 +46,28 @@ function updateColor() {
   console.log(colorPicker);
   curColor = colorPicker;
 }
+var color = colorBtn;
+let rainb = rainbowBtn;
+let currentMode = color;
+function colorMode() {
+  currentMode = color;
+  console.log(currentMode);
+}
+function rainbowMode() {
+  currentMode = rainb;
+  console.log(currentMode);
+}
+function changeColor(e) {
+  rainbow();
+  Object.assign(e.target.style, {backgroundColor: curColor});
+}
+/*
 function changeColor(e) {
   rainbow();
   Object.assign(e.target.style, {
     backgroundColor: curColor})
   }
-
+*/
 function randomNum() {
   return Math.floor(Math.random() * (255 - 0) + 0);
 }
