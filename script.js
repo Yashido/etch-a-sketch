@@ -7,14 +7,10 @@ const sizeSlider = document.getElementById('sizeSlider').value;
 console.log(sizeSlider);
 const grid = document.getElementById('grid');
 const gridElement = document.getElementsByClassName('gridElement');
-
-// const mouseValue;
 const value = document.getElementById('sizeSlider').oninput = () => setSizeValue();
-
 function setSizeValue() {
   sizeValue.innerHTML = `${val} x ${val}`;
 }
-
 function clearGrid() {
   grid.innerHTML = '';
   setGrid(val);
@@ -45,7 +41,6 @@ function updateColor() {
   console.log(colorPicker);
   currentColor = colorPicker;
 }
-
 const defaultMode = 'solid';
 let currentMode = defaultMode;
 
@@ -53,12 +48,6 @@ function colorMode(mode) {
   currentMode = mode;
   console.log(currentMode);
 }
-/*
-function rainbowMode() {
-  currentMode = rainb;
-  console.log(currentMode);
-}
-*/
 function changeColor(e) {
   if(currentMode === 'solid') {
     currentColor = colorPicker;
@@ -72,13 +61,6 @@ function changeColor(e) {
     Object.assign(e.target.style, {backgroundColor: currentColor});
   }
 }
-/*
-function changeColor(e) {
-  rainbow();
-  Object.assign(e.target.style, {
-    backgroundColor: curColor})
-  }
-*/
 function randomNum() {
   return Math.floor(Math.random() * (255 - 0) + 0);
 }
@@ -89,13 +71,7 @@ function rainbowMode() {
   currentColor = 'rgb('+ r + ','+ g +','+ b +')';
   console.log(currentColor);
 }
-
 const gridSize = 16;
 
-/*
-window.onload = () => {
-    setGrid(gridSize);
-}
-*/
 setGrid(16);
 setSizeValue();
